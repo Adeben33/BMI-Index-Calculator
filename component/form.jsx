@@ -9,34 +9,55 @@ function Form() {
         <label for="metric">Metric</label>
         <input type="radio" name="metric" id="metric" />
         <label for="metric">Imperial</label> */}
-        <label For="weightId" className="radio">
-          <input
-            type="radio"
-            name="weightType"
-            id="weightId"
-            className="radio__input"
-          />
-          <div className="radio_radio"></div>
-          Metric
+        <div className="weight">
+          <label For="metricId" className="radio">
+            <input
+              type="radio"
+              name="weightType"
+              id="metricId"
+              className="radio__input"
+            />
+            <div className="radio__radio"></div>
+            Metric
+          </label>
+          <label For="ImperialId" className="radio">
+            <input
+              type="radio"
+              name="weightType"
+              id="ImperialId"
+              className="radio__input"
+            />
+            <div className="radio__radio"></div>
+            Imperial
+          </label>
+        </div>
+
+        <label For="height" className="box">
+          Height
+          <br />
+          <div className="height-input">
+            <input
+              type="number"
+              id="height"
+              name="height"
+              // placeholder="cm"
+              min={0}
+              className="weight__input"
+            />
+            {/* <p>cm</p> */}
+          </div>
         </label>
 
-        <br />
-        <label For="height">Height</label>
-        <input
-          type="number"
-          id="height"
-          name="height"
-          placeholder="cm"
-          min={0}
-        />
-        <label For="weight">weight</label>
+        {/* <label For="weight" className="">
+          weight
+        </label>
         <input
           type="number"
           id="weight"
           name="weight"
-          placeholder="cm"
+          // placeholder="cm"
           min={0}
-        />
+        /> */}
       </form>
     </div>
   );
