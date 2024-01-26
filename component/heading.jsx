@@ -17,13 +17,17 @@ function Heading() {
           />
         </svg>
       </div>
-      <div className="heading">Body Mass Index Calculator</div>
-      <p>
-        Better understand your weight in relation to relation to your height
-        using our body mass index (BM) calculator. While BMI is not the sole
-        determinent of a helathy weight, it offers a valuable starting point to
-        evaluate your overall health and well-being
-      </p>
+      <div className="main">
+        <div className="heading">
+          Body Mass <br /> Index Calculator
+        </div>
+        <p className="text">
+          Better understand your weight in relation to relation to your height
+          using our body mass index (BM) calculator. While BMI is not the sole
+          determinent of a helathy weight, it offers a valuable starting point
+          to evaluate your overall health and well-being
+        </p>
+      </div>
     </div>
   );
 }

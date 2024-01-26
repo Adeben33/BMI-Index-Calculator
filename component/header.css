@@ -1,9 +1,15 @@
 .header {
   padding-left: 69px;
   padding-top: 47px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  margin-right: 117px;
+  position: relative;
 }
 
-svg {
-  width: 64px;
-  height: 64px;
-}
+/* Form {
+  position: absolute;
+  right: 200px;
+} */

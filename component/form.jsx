@@ -1,7 +1,9 @@
+import "./form.css";
+
 function Form() {
   return (
     <div>
-      <p>Enter your details below</p>
+      <p className="formHeading">Enter your details below</p>
       <form action="">
         <input type="radio" name="metric" id="metric" />
         <label for="metric">Metric</label>
