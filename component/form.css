@@ -1,3 +1,10 @@
+/* .form {
+  position: absolute;
+  right: 50px;
+} */
+
 .formHeading {
+  font-size: 24px;
   padding-right: 0;
+  font-weight: 600;
 }

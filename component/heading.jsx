@@ -2,7 +2,7 @@ import "./heading.css";
 
 function Heading() {
   return (
-    <div>
+    <div className="heading">
       <div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -18,7 +18,7 @@ function Heading() {
         </svg>
       </div>
       <div className="main">
-        <div className="heading">
+        <div className="heading-text">
           Body Mass <br /> Index Calculator
         </div>
         <p className="text">

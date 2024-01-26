@@ -1,15 +1,9 @@
 .header {
-  padding-left: 69px;
-  padding-top: 47px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 30px;
-  margin-right: 117px;
-  position: relative;
+  margin-right: 290px;
 }
 
 /* Form {
   position: absolute;
-  right: 200px;
-} */
+  /* right: 200px; */
+/* } */
