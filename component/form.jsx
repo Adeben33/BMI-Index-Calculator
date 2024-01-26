@@ -5,10 +5,6 @@ function Form() {
     <div className="form">
       <p className="formHeading">Enter your details below</p>
       <form action="">
-        {/* <input type="radio" name="metric" id="metric" />
-        <label for="metric">Metric</label>
-        <input type="radio" name="metric" id="metric" />
-        <label for="metric">Imperial</label> */}
         <div className="weight">
           <label For="metricId" className="radio">
             <input
@@ -31,23 +27,39 @@ function Form() {
             Imperial
           </label>
         </div>
+        <div className="hwbox">
+          <label For="height" className="box">
+            Height
+            <br />
+            <div className="height-input">
+              <input
+                type="number"
+                id="height"
+                name="height"
+                placeholder="0"
+                min={0}
+                className="weight__input"
+              />
+              {/* <p>cm</p> */}
+            </div>
+          </label>
 
-        <label For="height" className="box">
-          Height
-          <br />
-          <div className="height-input">
-            <input
-              type="number"
-              id="height"
-              name="height"
-              // placeholder="cm"
-              min={0}
-              className="weight__input"
-            />
-            {/* <p>cm</p> */}
-          </div>
-        </label>
-
+          <label For="weight" className="box">
+            Weight
+            <br />
+            <div className="height-input">
+              <input
+                type="number"
+                id="height"
+                name="height"
+                placeholder="0"
+                min={0}
+                className="weight__input"
+              />
+              {/* <p>cm</p> */}
+            </div>
+          </label>
+        </div>
         {/* <label For="weight" className="">
           weight
         </label>
