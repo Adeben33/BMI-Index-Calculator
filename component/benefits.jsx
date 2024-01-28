@@ -58,7 +58,7 @@ function Benefits() {
           />
         </svg>
         <p className="heading-small">Adequate sleep</p>
-        <p className="content">
+        <p className="content more-paddiing ">
           Sleep enhances mental clarity, emotional stability, and physical
           wellness, promoting overall restoration and rejuvenation.
         </p>

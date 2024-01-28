@@ -1,7 +1,7 @@
 .benefits {
   margin-left: 97px;
+  margin-bottom: 79px;
   display: flex;
-  gap: 55px;
 }
 
 .benefits .benefits-details {
@@ -24,7 +24,11 @@
 .benefits .benefits-details .content {
   margin: 0;
   padding: 0;
-  padding-right: 40px;
+  padding-right: 75px;
   font-size: 16px;
   line-height: 1.5;
+}
+
+.benefits .benefits-details .more-paddiing {
+  padding-right: 90px;
 }
