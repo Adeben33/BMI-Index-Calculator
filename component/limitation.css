@@ -1,0 +1,22 @@
+.limations {
+  max-width: 564px;
+  margin-left: 97px;
+  /* margin-top: 510px; */
+}
+
+.limations .content {
+}
+
+.limations .content .heading {
+  background-color: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.limations .content .text {
+  padding: 0;
+}

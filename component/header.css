@@ -1,6 +1,7 @@
 .header {
   gap: 30px;
-  margin-right: 290px;
+  padding-right: 290px;
+  position: relative;
 }
 
 /* Form {

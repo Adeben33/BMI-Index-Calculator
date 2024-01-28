@@ -4,9 +4,11 @@ import Heading from "./heading";
 
 function Header() {
   return (
-    <div className="header">
-      <Heading />
-      <Form />
+    <div>
+      <div className="header">
+        <Heading />
+        <Form />
+      </div>
     </div>
   );
 }

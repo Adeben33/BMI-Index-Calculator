@@ -1,0 +1,30 @@
+.benefits {
+  margin-left: 97px;
+  display: flex;
+  gap: 55px;
+}
+
+.benefits .benefits-details {
+}
+
+.benefits .benefits-details svg {
+  width: 64px;
+  height: 64px;
+}
+
+.benefits .benefits-details .heading-small {
+  margin: 0;
+  margin-top: 40px;
+  margin-bottom: 25px;
+  padding: 0;
+  font-size: 24px;
+  line-height: 1.1;
+  font-weight: 600;
+}
+.benefits .benefits-details .content {
+  margin: 0;
+  padding: 0;
+  padding-right: 40px;
+  font-size: 16px;
+  line-height: 1.5;
+}

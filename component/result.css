@@ -1,0 +1,40 @@
+.result-container {
+  margin: 60px;
+  margin-right: 0;
+  margin-left: 97px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+}
+
+.result-container .result-img {
+  margin-left: ;
+}
+
+.result-container .result-img img {
+  height: 533px;
+  width: 564px;
+}
+
+.result-container .result-text {
+  padding-left: 100px;
+
+  width: 100%;
+}
+
+.heading-large {
+  padding: 0;
+  /* padding-left: 100px; */
+  margin-top: 100px;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.result-container .result-text .text {
+  padding: 0;
+  padding-right: 100px;
+
+  /* padding-left: 100px; */
+}

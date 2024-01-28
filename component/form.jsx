@@ -60,16 +60,10 @@ function Form() {
             </div>
           </label>
         </div>
-        {/* <label For="weight" className="">
-          weight
-        </label>
-        <input
-          type="number"
-          id="weight"
-          name="weight"
-          // placeholder="cm"
-          min={0}
-        /> */}
+        <div className="welcome-text">
+          <p className="heading-large">Welcome!</p>
+          <p>Enter you height and weight and you'll see your BMI result here</p>
+        </div>
       </form>
     </div>
   );
