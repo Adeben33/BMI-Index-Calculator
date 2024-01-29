@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./form.css";
 import Imperial from "./imperial";
 import Metric from "./metric";
@@ -8,25 +8,33 @@ function Form() {
   const [height, setHeight] = useState("");
   const [weight, setWeight] = useState("");
 
-  const [heightIn, setHeightIn] = useState("");
-  const [weightSt, setWeightIbs] = useState("");
+  const [heightFt, setHeightFt] = useState(0);
+  const [heightIn, setHeightIn] = useState(0);
+  const [weightSt, setWeightSt] = useState(0);
+  const [weightLb, setWeightLb] = useState(0);
+  const [bmi, setBmi] = useState(null);
 
   const handlerinputHeight = (e) => {
     setHeight(e.target.value);
   };
 
-  console.log(weight);
-
   const handlerinputWeight = (e) => {
     setWeight(e.target.value);
+  };
+
+  const handlerinputHeightFt = (e) => {
+    setHeightFt(e.target.value);
   };
 
   const handlerinputHeightIn = (e) => {
     setHeightIn(e.target.value);
   };
 
+  const handlerinputWeightSt = (e) => {
+    setWeightSt(e.target.value);
+  };
   const handlerinputWeightIbs = (e) => {
-    setWeightIbs(e.target.value);
+    setWeightLb(e.target.value);
   };
 
   const handleRadioChange = () => {
@@ -34,6 +42,30 @@ function Form() {
     setIsMetric(!isMetric);
   };
 
+  useEffect(() => {
+    if (isMetric) {
+      if (height && weight) {
+        const heightInMeters = height / 100;
+        const bmiValue = weight / (heightInMeters * heightInMeters);
+
+        setBmi(bmiValue.toFixed(2)); // Round to two decimal places
+      } else {
+        setBmi(null);
+      }
+    } else if (!isMetric) {
+      if (heightFt && heightIn && weightSt && weightLb) {
+        const heightCm = heightFt * 30.48 + heightIn * 2.54;
+
+        const weightKg = weightSt * 6.35029 + weightLb * 0.453592;
+
+        const bmiValue = weightKg / Math.pow(heightCm / 100, 2);
+
+        setBmi(bmiValue.toFixed(2));
+      }
+    }
+  }, [height, weight, heightFt, heightIn, weightSt, weightLb, isMetric]);
+
+  console.log(bmi);
   return (
     <div className="form">
       <p className="formHeading">Enter your details below</p>
@@ -71,12 +103,10 @@ function Form() {
           />
         ) : (
           <Imperial
-            setHeight={setHeight}
-            setWeight={setWeight}
-            setHeightIn={setHeightIn}
-            setWeightIbs={setWeightIbs}
-            onInputHeight={handlerinputHeight}
-            onInputWeight={handlerinputWeight}
+            onInputHeight={handlerinputHeightFt}
+            onInputWeightSt={handlerinputWeightSt}
+            onInputHeightIn={handlerinputHeightIn}
+            onInputWeightIbs={handlerinputWeightIbs}
           />
         )}
         <div className="welcome-text">

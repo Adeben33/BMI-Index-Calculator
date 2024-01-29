@@ -1,6 +1,6 @@
 import "./metric.css";
 
-function Metric({ InputHeight, InputWeight }) {
+function Metric({ onInputHeight, onInputWeight }) {
   return (
     <div className="hwbox">
       <label For="height" className="box">
@@ -14,7 +14,7 @@ function Metric({ InputHeight, InputWeight }) {
             placeholder="0"
             min={0}
             className="weight__input"
-            onChange={InputHeight}
+            onChange={onInputHeight}
           />
           <div className="cm">cm</div>
         </div>
@@ -31,7 +31,7 @@ function Metric({ InputHeight, InputWeight }) {
             placeholder="0"
             min={0}
             className="weight__input"
-            onChange={InputWeight}
+            onChange={onInputWeight}
           />
           <div className="cm">kg</div>
         </div>

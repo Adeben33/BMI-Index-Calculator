@@ -1,6 +1,11 @@
 import "./imperial.css";
 
-function Imperial() {
+function Imperial({
+  onInputHeight,
+  onInputWeightSt,
+  onInputHeightIn,
+  onInputWeightIbs,
+}) {
   return (
     <div className="hwbox flex-direction-column ">
       <div className="display-flex">
@@ -15,7 +20,7 @@ function Imperial() {
               placeholder="0"
               min={0}
               className="weight__input"
-              // onChange={handlerinputHeight}
+              onChange={onInputHeight}
             />
             <div className="cm">ft</div>
           </div>
@@ -30,7 +35,7 @@ function Imperial() {
               placeholder="0"
               min={0}
               className="weight__input"
-              // onChange={handlerinputHeight}
+              onChange={onInputHeightIn}
             />
             <div className="cm">in</div>
           </div>
@@ -48,10 +53,8 @@ function Imperial() {
               placeholder="0"
               min={0}
               className="weight__input"
-
-              // onChange={handlerinputWeight}
+              onChange={onInputWeightSt}
             />
-            {/* <p>cm</p> */}
             <div className="cm">st</div>
           </div>
         </label>
@@ -65,7 +68,7 @@ function Imperial() {
               placeholder="0"
               min={0}
               className="weight__input"
-              // onChange={handlerinputWeight}
+              onChange={onInputWeightIbs}
             />
             <div className="cm">Ibs</div>
           </div>
