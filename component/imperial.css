@@ -16,15 +16,6 @@
   font-weight: 600;
 }
 
-.weight {
-  display: flex;
-  /* justify-content: space-between; */
-  /* padding-right: 35px; */
-  gap: 100px;
-  margin-top: 32px;
-  margin-bottom: 32px;
-}
-
 .radio {
   display: inline-flex;
   align-items: center;
@@ -77,14 +68,10 @@
   color: #253347;
 }
 
-input[type="number"] {
-  color: #253347;
-}
 input::placeholder {
   color: #253347;
   position: absolute;
-  font-size: 24px;
-  top: 30%;
+  top: 28%;
   left: 10%;
   font-weight: 400;
   /* font-size: 22px; */
@@ -102,28 +89,24 @@ input::placeholder {
   color: #5e6e85;
   width: 100%;
   display: flex;
-  gap: 16px;
+  /* gap: 50px; */
   justify-content: space-between;
 }
 
+.flex-direction-column {
+  flex-direction: column;
+}
+
+.display-flex {
+  display: flex;
+  gap: 16px;
+}
+
 .box .height-input {
-  color: #253347;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 600;
   position: relative;
   display: inline-block;
-}
-
-.cm {
-  content: "cm";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 90%;
-  right: -80%;
-  transform: translateY(-50%);
-  pointer-events: none; /* Prevent the pseudo-element from blocking interactions with the input */
-  color: #345ff6;
 }
 
 input[type="number"]::-webkit-inner-spin-button {
@@ -133,48 +116,4 @@ input[type="number"]::-webkit-inner-spin-button {
 height-input input[type="number"]::selection {
   font-size: 24px;
   color: #253347;
-}
-
-/* .box .height-input p {
-  padding: 0;
-  margin-top: 0;
-  font-size: 22px;
-  color: #345ff6;
-  font-weight: 600;
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateX(50%);
-} */
-
-.form form .welcome-text,
-.form form .welcome-text p:last-child,
-.form form .welcome-text .heading-large {
-  padding-right: 0;
-  padding-bottom: 0;
-  margin-top: 0;
-}
-
-.form form .welcome-text .heading-large {
-  margin-bottom: 32px;
-  font-size: 24px;
-  font-weight: 600;
-  padding: 0;
-}
-
-.form form .welcome-text {
-  width: 100%;
-  font-weight: 400;
-  font-size: 14px;
-  background: linear-gradient(
-    to right,
-    rgb(52, 95, 246),
-    rgba(52, 95, 246, 0.7)
-  );
-  padding: 32px;
-  color: #fff;
-  border-radius: 0 10% 10% 0/0 50% 50% 0;
-  margin-bottom: 32px;
-  margin-top: 32px;
-  line-height: 1.1;
 }

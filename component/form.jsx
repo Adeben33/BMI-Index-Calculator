@@ -1,17 +1,32 @@
 import { useState } from "react";
 import "./form.css";
+import Imperial from "./imperial";
+import Metric from "./metric";
 
 function Form() {
-  const [isMetric, setIsmetric] = useState(true);
+  const [isMetric, setIsMetric] = useState(true);
   const [height, setHeight] = useState("");
   const [weight, setWeight] = useState("");
+
+  const [heightIn, setHeightIn] = useState("");
+  const [weightSt, setWeightIbs] = useState("");
 
   const handlerinputHeight = (e) => {
     setHeight(e.target.value);
   };
 
+  console.log(weight);
+
   const handlerinputWeight = (e) => {
     setWeight(e.target.value);
+  };
+
+  const handlerinputHeightIn = (e) => {
+    setHeightIn(e.target.value);
+  };
+
+  const handlerinputWeightIbs = (e) => {
+    setWeightIbs(e.target.value);
   };
 
   const handleRadioChange = () => {
@@ -49,41 +64,21 @@ function Form() {
             Imperial
           </label>
         </div>
-        <div className="hwbox">
-          <label For="height" className="box">
-            Height
-            <br />
-            <div className="height-input">
-              <input
-                type="number"
-                id="height"
-                name="height"
-                placeholder="0"
-                min={0}
-                className="weight__input"
-                onChange={handlerinputHeight}
-              />
-              {/* <p>cm</p> */}
-            </div>
-          </label>
-
-          <label htmlFor="weight" className="box">
-            Weight
-            <br />
-            <div className="height-input">
-              <input
-                type="number"
-                id="weight"
-                name="weight"
-                placeholder="0"
-                min={0}
-                className="weight__input"
-                onChange={handlerinputWeight}
-              />
-              {/* <p>cm</p> */}
-            </div>
-          </label>
-        </div>
+        {isMetric ? (
+          <Metric
+            onInputHeight={handlerinputHeight}
+            onInputWeight={handlerinputWeight}
+          />
+        ) : (
+          <Imperial
+            setHeight={setHeight}
+            setWeight={setWeight}
+            setHeightIn={setHeightIn}
+            setWeightIbs={setWeightIbs}
+            onInputHeight={handlerinputHeight}
+            onInputWeight={handlerinputWeight}
+          />
+        )}
         <div className="welcome-text">
           <p className="heading-large">Welcome!</p>
           <p>Enter you height and weight and you'll see your BMI result here</p>
