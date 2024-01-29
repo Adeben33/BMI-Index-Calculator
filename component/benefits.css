@@ -1,6 +1,8 @@
 .benefits {
-  margin-left: 97px;
-  margin-bottom: 79px;
+  width: 100%;
+  padding: 70px;
+  border-radius: 15px;
+  background: linear-gradient(to right bottom, #fff, rgba(52, 95, 246, 0.1));
   display: flex;
 }
 
