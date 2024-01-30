@@ -178,3 +178,58 @@ height-input input[type="number"]::selection {
   margin-top: 32px;
   line-height: 1.1;
 }
+
+.bmi-span {
+  display: block;
+  font-size: 64px;
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+.BMI {
+  width: 100%;
+  font-weight: 400;
+  font-size: 14px;
+  background: linear-gradient(
+    to right,
+    rgb(52, 95, 246),
+    rgba(52, 95, 246, 0.7)
+  );
+  padding: 32px;
+  color: #fff;
+  border-radius: 0 10% 10% 0/0 50% 50% 0;
+  margin-bottom: 32px;
+  margin-top: 32px;
+  line-height: 1.1;
+}
+
+form form .bmi .heading-large {
+  margin-bottom: 32px;
+  font-size: 24px;
+  font-weight: 600;
+  padding: 0;
+}
+
+.display-flex-bmi {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  /* gap: 48px; */
+  justify-content: center;
+  align-items: center;
+}
+
+.bmi-content {
+  width: 100%;
+  font-weight: 400;
+  background: linear-gradient(
+    to right,
+    rgb(52, 95, 246),
+    rgba(52, 95, 246, 0.7)
+  );
+  color: #fff;
+  border-radius: 0 10% 10% 0/0 50% 50% 0;
+  margin-bottom: 32px;
+  margin-top: 32px;
+  line-height: 1.1;
+}

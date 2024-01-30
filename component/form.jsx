@@ -44,6 +44,7 @@ function Form() {
 
   useEffect(() => {
     if (isMetric) {
+      setBmi(null);
       if (height && weight) {
         const heightInMeters = height / 100;
         const bmiValue = weight / (heightInMeters * heightInMeters);
@@ -53,6 +54,7 @@ function Form() {
         setBmi(null);
       }
     } else if (!isMetric) {
+      setBmi(null);
       if (heightFt && heightIn && weightSt && weightLb) {
         const heightCm = heightFt * 30.48 + heightIn * 2.54;
 
@@ -61,6 +63,8 @@ function Form() {
         const bmiValue = weightKg / Math.pow(heightCm / 100, 2);
 
         setBmi(bmiValue.toFixed(2));
+      } else {
+        setBmi(null);
       }
     }
   }, [height, weight, heightFt, heightIn, weightSt, weightLb, isMetric]);
@@ -109,10 +113,25 @@ function Form() {
             onInputWeightIbs={handlerinputWeightIbs}
           />
         )}
-        <div className="welcome-text">
-          <p className="heading-large">Welcome!</p>
-          <p>Enter you height and weight and you'll see your BMI result here</p>
-        </div>
+        {!bmi ? (
+          <div className="welcome-text">
+            <p className="heading-large">Welcome!</p>
+            <p>
+              Enter you height and weight and you'll see your BMI result here
+            </p>
+          </div>
+        ) : (
+          <div className="BMI display-flex-bmi">
+            <p className="heading-large">
+              Your BMI is...
+              <span className="bmi-span">{bmi}</span>
+            </p>
+            <p className="bmi-text">
+              Your BMI suggests you’re a healthy weight. Your ideal weight is
+              between 63.3kgs - 85.2kgs.
+            </p>
+          </div>
+        )}
       </form>
     </div>
   );
