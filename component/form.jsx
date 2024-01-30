@@ -44,7 +44,7 @@ function Form() {
 
   useEffect(() => {
     if (isMetric) {
-      setBmi(null);
+      // setBmi(null);
       if (height && weight) {
         const heightInMeters = height / 100;
         const bmiValue = weight / (heightInMeters * heightInMeters);
@@ -69,7 +69,16 @@ function Form() {
     }
   }, [height, weight, heightFt, heightIn, weightSt, weightLb, isMetric]);
 
+  useEffect(() => {
+    setHeight(0);
+    setWeight(0);
+    setHeightFt(0);
+    setHeightIn(0);
+    setWeightSt(0);
+    setWeightLb(0);
+  }, [isMetric]);
   console.log(bmi);
+
   return (
     <div className="form">
       <p className="formHeading">Enter your details below</p>
@@ -128,7 +137,12 @@ function Form() {
             </p>
             <p className="bmi-text">
               Your BMI suggests you’re a healthy weight. Your ideal weight is
-              between 63.3kgs - 85.2kgs.
+              between
+              {isMetric ? (
+                <span>63.3kgs - 85.2kgs.</span>
+              ) : (
+                <span>9st 6lbs- 12st 10lbs.</span>
+              )}
             </p>
           </div>
         )}

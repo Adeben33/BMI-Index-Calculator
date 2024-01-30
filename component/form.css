@@ -203,20 +203,22 @@ height-input input[type="number"]::selection {
   line-height: 1.1;
 }
 
-form form .bmi .heading-large {
-  margin-bottom: 32px;
+form .BMI .heading-large {
+  width: 40%;
   font-size: 24px;
   font-weight: 600;
   padding: 0;
+  margin: 0;
 }
 
 .display-flex-bmi {
-  padding: 0;
   margin: 0;
+  margin-top: 32px;
   display: flex;
-  /* gap: 48px; */
-  justify-content: center;
-  align-items: center;
+  width: 100%;
+  gap: 50px;
+  justify-content: start;
+  align-items: start;
 }
 
 .bmi-content {
@@ -232,4 +234,17 @@ form form .bmi .heading-large {
   margin-bottom: 32px;
   margin-top: 32px;
   line-height: 1.1;
+}
+
+.BMI p {
+  padding: 0;
+}
+
+.bmi-text {
+  margin: 0;
+  padding: 0;
+}
+
+.bmi-text span {
+  font-weight: 600;
 }
